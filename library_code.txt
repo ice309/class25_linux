@@ -1,0 +1,57 @@
+=======================
+#include <stdio.h>
+
+int main(void){
+        int a, b, sum=0;
+        float avg=0.0;
+        scanf("%d %d", &a, &b);
+        sum = a + b;
+        avg = (a + b)/2.0;
+        printf("sum= %d\n", sum);
+        printf("average= %f\n", avg);
+        return 0;
+}
+
+=======================
+#include <stdio.h>
+  
+int sum(int x, int y);
+float avg(int x, int y);
+
+int main(void){
+        int a, b;
+        scanf("%d %d", &a, &b);
+        printf("sum= %d\n", sum(a,b));
+        printf("average= %f\n", avg(a,b));
+        return 0;
+}
+
+int sum(int x, int y){
+        return(x+y);
+}
+float avg(int x, int y){
+        return (x+y)/2.0;
+}
+
+
+=======================
+#include <stdio.h>
+#include "func.h"
+int main(void){
+        int a, b;
+        scanf("%d %d", &a, &b);
+        printf("sum= %d\n", sum(a,b));
+        printf("average= %f\n", avg(a,b));
+        return 0;
+}
++++++++++++++++++
+int sum(int x, int y){
+        return(x+y);
+}
+float avg(int x, int y){
+        return (x+y)/2.0;
+}
++++++++++++++++++
+int sum(int x, int y);
+float avg(int x, int y);
+========================                     
